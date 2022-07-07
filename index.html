@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- Box icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- OwlCarousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" 
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+       
+    <!-- Jquery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script> -->
+</head>
+<body>
+    <!-- ========================= HEADER NAVBAR ============================ -->
+    <header>
+        <a href="#" class="logo">
+            <i class="bx bxs-movie"></i>Movies
+        </a>
+      
+        <!-- Menu -->
+        <ul class="navbar">
+            <li><a href="#home" title="home" class="active">Home</a></li>
+            <li><a href="#movies" title="movies">Movies</a></li>
+            <li><a href="#coming" title="coming">Coming soon</a></li>
+            <li><a href="#newsletter" title="newsletter">Newsletter</a></li>
+            <li><a href="#sign-up" class="btn js-reg-btn" type="button" title="sign-up" style="color: #fff;">Sign up</a></li>
+            <li>
+                <div class="checkbox-btn">
+                    <input type="checkbox" name="" id="checkbox">
+                    <label for="checkbox">
+                        <i class='bx bxs-sun sun'></i>
+                        <i class='bx bx-moon moon'></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+            </li>
+        </ul>
+        <div class="flex">
+            <div class="bx bx-menu" id="menu-icon"></div>
+            <a href="#info-user" class="info-user" title="Account">
+                <i class='bx bx-user-circle'></i>
+                <ul class="info">
+                    <li><span id="name-user"></span></li>
+                    <li><span id="email-user"></span></li>
+                    <li><button class="btn" onClick="logout()">Log out</button></li>                    
+                </ul>
+            </a>
+            
+        </div>
+    </header>
+    
+    <!-- ====================================  HOME PAGE  ============================================== -->
+    <!-- ==== SLIDER SECTION ==== -->
+
+    <section class="slider">
+        <div class="slides">
+            <!-- Radio button start -->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+            <input type="radio" name="radio-btn" id="radio5">
+            <!-- Radio button end -->
+
+            <!-- slide image start -->
+            <div class="slide first">
+                <img src="assets/img/home1.jpg" alt="">
+                <div class="content-slide">
+                    <div class="content-slide-item">
+                        <div class="content-slide-title">
+                            Train to Busan
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="content-desc">
+                            While a zombie virus breaks out in South Korea, 
+                            passengers struggle to survive on the train from Seoul to Busan.
+                        </div>
+                        <div class="item-action">
+                            <a href="#train-to-busan" data-tab-target="#train-to-busan" type="button" class="btn btn-watch-now" style="color: #fff;">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span>Watch now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/home2.jpg" alt="">
+                <div class="content-slide">
+                    <div class="content-slide-item">
+                        <div class="content-slide-title">
+                            Shut in
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="content-desc">
+                            A widowed child psychologist lives an isolated existence in rural New England. 
+                            Caught in a deadly winter storm, she must find a way to rescue a young boy before he disappears forever.
+                        </div>
+                        <div class="item-action">
+                            <a href="#shut-in" data-tab-target="#shut-in" type="button" class="btn btn-watch-now" style="color: #fff;">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span>Watch now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/home3.jpg" alt="">
+                <div class="content-slide">
+                    <div class="content-slide-item">
+                        <div class="content-slide-title">
+                            The Silent Sea
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="content-desc">
+                            During a perilous 24-hour mission on the moon, 
+                            space explorers try to retrieve samples from an 
+                            abandoned research facility steeped in classified secrets.
+                        </div>
+                        <div class="item-action">
+                            <a href="#the-silent-sea" data-tab-target="#the-silent-sea" type="button" class="btn btn-watch-now" style="color: #fff;">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span>Watch now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/home4.jpg" alt="">
+                <div class="content-slide">
+                    <div class="content-slide-item">
+                        <div class="content-slide-title">
+                            The Lion King
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>120mins</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="content-desc">
+                            Lion prince Simba and his father 
+                            are targeted by his bitter uncle, 
+                            who wants to ascend the throne himself.
+                        </div>
+                        <div class="item-action">
+                            <a href="#the-lion-king" data-tab-target="#the-lion-king" type="button" class="btn btn-watch-now" style="color: #fff;">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span>Watch now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="assets/img/home5.jpg" alt="">
+                <div class="content-slide">
+                    <div class="content-slide-item">
+                        <div class="content-slide-title">
+                            Crash Landing on You
+                        </div>
+                        <div class="movie-infos">
+                            <div class="movie-info">
+                                <i class="bx bxs-star"></i>
+                                <span>9.5</span>
+                            </div>
+                            <div class="movie-info">
+                                <i class="bx bxs-time"></i>
+                                <span>16/16</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>HD</span>
+                            </div>
+                            <div class="movie-info">
+                                <span>16+</span>
+                            </div>
+                        </div>
+                        <div class="content-desc">
+                            Following a wealthy South Korean 
+                            woman who ends up in the demilitarized zone between 
+                            North Korea and South Korea after being carried over 
+                            the border by a tornado while paragliding.
+                        </div>
+                        <div class="item-action">
+                            <a href="#crash-landing-on-you" data-tab-target="#crash-landing-on-you" type="button" class="btn btn-watch-now" style="color: #fff;">
+                                <i class="bx bxs-right-arrow"></i>
+                                <span>Watch now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- slide image end -->
+
+            <!-- slide image start -->
+
+            <!-- navigation automatic start -->
+            <div class="navigation-auto">
+                <div class="auto-btn auto-btn1"><span>1</span></div>
+                <div class="auto-btn auto-btn2"><span>2</span></div>
+                <div class="auto-btn auto-btn3"><span>3</span></div>
+                <div class="auto-btn auto-btn4"><span>4</span></div>
+                <div class="auto-btn auto-btn5"><span>5</span></div>
+            </div>
+            <!-- navigation automatic end -->
+        </div>
+
+        <!-- Manual navigation start -->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"><span>1</span></label>
+            <label for="radio2" class="manual-btn"><span>2</span></label>
+            <label for="radio3" class="manual-btn"><span>3</span></label>
+            <label for="radio4" class="manual-btn"><span>4</span></label>
+            <label for="radio5" class="manual-btn"><span>5</span></label>
+        </div>
+
+        <!-- Manual navigation end -->
+    </section>
+
+    <!-- ========================= MAIN ============================ -->
+    
+    <main>
+        <hr>
+        <!-- Movie -->
+        <section class="movies" id="movies">
+            <h2 class="heading">Opening This Week</h2>
+            <div class="movies-container">
+                <!-- Box 1 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie1.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Avenger - End Game</h3></a>
+                    <span>120 min | Action</span>
+                </div>
+                <!-- Box 2 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie2.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Titanic</h3></a>
+                    <span>120 min | Romantic</span>
+                </div>
+                <!-- Box 3 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie3.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Us</h3></a>
+                    <span>120 min | Horror</span>
+                </div>
+                <!-- Box 4 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie4.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Joker</h3></a>
+                    <span>120 min | Horror</span>
+                </div>
+                <!-- Box 5 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie5.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Venom</h3></a>
+                    <span>120 min | Action</span>
+                </div>
+                <!-- Box 6 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie6.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Avatar</h3></a>
+                    <span>120 min | Science</span>
+                </div>
+                <!-- Box 7 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie7.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>IT</h3></a>
+                    <span>120 min | Horror</span>
+                </div>
+                <!-- Box 8 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie8.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Fast & Furious 7</h3></a>
+                    <span>120 min | Action</span>
+                </div>
+                <!-- Box 9 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie9.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Age of Ice</h3></a>
+                    <span>120 min | Disaster</span>
+                </div>
+                <!-- Box 10 -->
+                <div class="box">
+                    <div class="box-img">
+                        <img src="assets/img/movie10.jpg" alt="">
+                    </div>
+                    <a href="#"><h3>Harry Potter</h3></a>
+                    <span>120 min | Action</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Coming soon -->
+        <hr>
+        <section class="coming" id="coming">
+            <h2 class="heading">Coming soon</h2>
+            <!-- Coming soon -->
+            <div class="coming-wrapper">
+                <div class="coming-container">
+                    <!-- Box 1 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming1.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>The Rope Curse</h3></a>
+                        <span>120 min | Horror</span>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming2.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>Beauty and the Beast</h3></a>
+                        <span>120 min | Romantic</span>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming3.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>Bedroom Bath 2</h3></a>
+                        <span>120 min | Horror</span>
+                    </div>
+                    <!-- Box 4 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming4.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>The Core</h3></a>
+                        <span>120 min | Science</span>
+                    </div>
+                    <!-- Box 5 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming5.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>Age of Ice</h3></a>
+                        <span>120 min | Disaster</span>
+                    </div>
+                    <!-- Box 6 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming6.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>Geostorm</h3></a>
+                        <span>120 min | Disaster</span>
+                    </div>
+                    <!-- Box 7 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming7.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>5 years</h3></a>
+                        <span>120 min | Romantic</span>
+                    </div>
+                    <!-- Box 8 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming8.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>Me before You</h3></a>
+                        <span>120 min | Romantic</span>
+                    </div>
+                    <!-- Box 9 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming9.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>Doraemon</h3></a>
+                        <span>120 min | Cartoon</span>
+                    </div>
+                    <!-- Box 10 -->
+                    <div class="box">
+                        <div class="box-img">
+                            <img src="assets/img/coming10.jpg" alt="">
+                        </div>
+                        <a href="#"><h3>Dragon Balls</h3></a>
+                        <span>120 min | Cartoon</span>
+                    </div>
+                </div>
+                <div class="arrow-right">
+                    <i class='bx bx-chevron-right'></i>
+                </div>
+                <div class="arrow-left">
+                    <i class='bx bx-chevron-left'></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <div id="newsletter">
+            <div class="overlay"></div>
+            <section class="newsletter" style="color: #fff;">
+                <h1>Unlimited movies, TV shows, and more.</h1>
+                <h2>Watch anywhere. Cancel anytime.</h2>
+                <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+                <div class="form">
+                    <form action="" method="POST">
+                        <div class="input">
+                            <input type="email" placeholder="Enter email" name="email" class="email" required>
+                            <input type="submit" value="Get Started" class="btn">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- ========================= FOOTER ============================ -->
+    <hr>
+    <footer>
+        <a href="#" class="logo">
+            <i class="bx bxs-movie"></i>Movies
+        </a>
+        <div class="social">
+            <a href="#" title="facebook"><i class='bx bxl-facebook'></i></a>
+            <a href="#" title="twitter"><i class='bx bxl-twitter'></i></a>
+            <a href="#" title="instagram"><i class='bx bxl-instagram'></i></a>
+            <a href="#" title="tiktok"><i class='bx bxl-tiktok'></i></a>
+        </div>
+    </footer>
+    <!-- Copyright -->
+    <div class="copyright">
+        <p>&#169; Final Project PhamNguyenDuyTien All Right Reserved.</p>
+    </div>
+
+    <!-- ========================= MODAL SIGN IN ============================ -->
+    <div class="wrapper modal js-modal">
+        <div class="modal-container js-modal-container">
+            <div class="modal-close js-modal-close">
+                <i class='bx bx-x'></i>
+            </div>
+            <div class="form-container">
+                <div class="title-text modal-header">
+                    <div class="title login">Sign in</div>
+                    <div class="title signup">Sign up</div>
+                </div>
+                <div class="slide-controls">
+                    <input type="radio" name="slide" id="login" checked>
+                    <input type="radio" name="slide" id="signup">
+                    <label for="login" class="slide login">Sign in</label>
+                    <label for="signup" class="slide signup">Sign up</label>
+                    <div class="slider-tab"></div>
+                </div>
+                <div class="form-inner modal-body">
+                    <form action="#" class="login">
+                        <div class="field">
+                            <input type="text" placeholder="Email Address" id="signin-email" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Password" id="signin-password" required>
+                        </div>
+                        <div class="pass-link">
+                            <a href="#">Forgot password?</a>
+                        </div>
+                        <div class="center">
+                            <input type="submit" id="log-in-btn" value="Sign in" class="js-log-in-btn field btn" onclick="checkInfo()">
+                        </div>
+                        <div class="signup-link">
+                            <span style="color: #000;">No account?</span>
+                            <a href="">Sign up now!</a>
+                        </div>
+                    </form>
+                    <form action="#" class="signup">
+                        <div class="field">
+                            <input type="text" placeholder="Enter your name" id="signup-username" required>
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="Email Address" id="signup-email" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Password" id="signup-password" required>
+                        </div>
+                        <div class="field">
+                            <input type="password" placeholder="Confirm password" id="confirm-password" required>
+                        </div>
+                        <div class="center">
+                            <input type="submit" value="Sign up" id="register-btn" class="js-register-btn field btn">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================= MOVIE ============================ -->
+    <div class="movie-video">
+        <div id="train-to-busan" data-tab-content>
+            <div class="video-container">
+                <div class="film-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <video controls >
+                    <source src="assets/video/TrainToBusan.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="shut-in" data-tab-content>
+            <div class="video-container">
+                <div class="film-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <video controls >
+                    <source src="assets/video/ShutIn.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="the-silent-sea" data-tab-content>
+            <div class="video-container">
+                <div class="film-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <video controls >
+                    <source src="assets/video/TheSilentSea.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="the-lion-king" data-tab-content>
+            <div class="video-container">
+                <div class="film-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <video controls>
+                    <source src="assets/video/TheLionKing.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+        <div id="crash-landing-on-you" data-tab-content>
+            <div class="video-container">
+                <div class="film-close">
+                    <i class='bx bx-x'></i>
+                </div>
+                <video controls>
+                    <source src="assets/video/CrashLandingOnYou.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JS -->
+
+    <script src="assets/js/main.js"></script>
+
+    <!-- <script>
+        // ================= Slide card movie coming soon ===================== //
+        const arrowRight = document.querySelector('.arrow-right');
+        const arrowLeft = document.querySelector('.arrow-left');
+        const coming = document.querySelector('.coming-container');
+        const itemNumber = coming.querySelectorAll('img').length;
+        const ratio = Math.floor(window.innerWidth / 200);
+        let clickRightCounter = 0;
+        arrowRight.addEventListener("click",() => {
+            clickRightCounter++;
+            var a = itemNumber - (9 + clickRightCounter) + (9 - ratio) + clickLeftCounter; 
+            console.log("Right = ",clickRightCounter);
+            console.log("item = ",itemNumber);
+            console.log('a = ',a);
+            console.log('L = ',clickLeftCounter);
+            if(a >= 0){  
+                arrowLeft.classList.add('active'); 
+                coming.style.transform = `translateX(${coming.computedStyleMap().get('transform')[0].x.value-191.5}px)`;
+            }
+            else{
+                arrowLeft.classList.remove('active'); 
+                coming.style.transform = 'translateX(0)';
+                clickRightCounter = 0;
+                clickLeftCounter = 0;
+            }
+        });
+        let clickLeftCounter = 0;
+        arrowLeft.addEventListener("click",() => {
+            clickLeftCounter++;
+            var b = itemNumber - (9 + clickLeftCounter) + (9 - ratio) + clickRightCounter; 
+            console.log("Left = ",clickLeftCounter);
+            console.log("item = ",itemNumber);
+            console.log("b = ",b);
+            console.log('R = ', clickRightCounter);
+            if(b >= 0){  
+                arrowLeft.classList.add('active'); 
+                coming.style.transform = `translateX(${coming.computedStyleMap().get('transform')[0].x.value+191.5}px)`;
+                if(coming.style.transform === 'translateX(0px)'){
+                    arrowLeft.classList.remove('active');
+                }
+            }
+        });
+    </script> -->
+</body>
+</html>
