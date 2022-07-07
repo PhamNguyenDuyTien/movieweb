@@ -628,49 +628,5 @@
     <!-- JS -->
 
     <script src="assets/js/main.js"></script>
-
-    <!-- <script>
-        // ================= Slide card movie coming soon ===================== //
-        const arrowRight = document.querySelector('.arrow-right');
-        const arrowLeft = document.querySelector('.arrow-left');
-        const coming = document.querySelector('.coming-container');
-        const itemNumber = coming.querySelectorAll('img').length;
-        const ratio = Math.floor(window.innerWidth / 200);
-        let clickRightCounter = 0;
-        arrowRight.addEventListener("click",() => {
-            clickRightCounter++;
-            var a = itemNumber - (9 + clickRightCounter) + (9 - ratio) + clickLeftCounter; 
-            console.log("Right = ",clickRightCounter);
-            console.log("item = ",itemNumber);
-            console.log('a = ',a);
-            console.log('L = ',clickLeftCounter);
-            if(a >= 0){  
-                arrowLeft.classList.add('active'); 
-                coming.style.transform = `translateX(${coming.computedStyleMap().get('transform')[0].x.value-191.5}px)`;
-            }
-            else{
-                arrowLeft.classList.remove('active'); 
-                coming.style.transform = 'translateX(0)';
-                clickRightCounter = 0;
-                clickLeftCounter = 0;
-            }
-        });
-        let clickLeftCounter = 0;
-        arrowLeft.addEventListener("click",() => {
-            clickLeftCounter++;
-            var b = itemNumber - (9 + clickLeftCounter) + (9 - ratio) + clickRightCounter; 
-            console.log("Left = ",clickLeftCounter);
-            console.log("item = ",itemNumber);
-            console.log("b = ",b);
-            console.log('R = ', clickRightCounter);
-            if(b >= 0){  
-                arrowLeft.classList.add('active'); 
-                coming.style.transform = `translateX(${coming.computedStyleMap().get('transform')[0].x.value+191.5}px)`;
-                if(coming.style.transform === 'translateX(0px)'){
-                    arrowLeft.classList.remove('active');
-                }
-            }
-        });
-    </script> -->
 </body>
 </html>
